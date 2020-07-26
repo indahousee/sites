@@ -8,15 +8,31 @@
 
 body {
     margin: 0;
-    animation-name: back_change;
-    animation-duration: 25s;
-    animation-fill-mode: forwards;
+    animation-name: imageAnimation;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
     animation-iteration-count: infinite;
-    animation-timing-function: steps(1, end);
+    animation-direction: normal;
+    animation-play-state: running;
+    background: var(--background_one);
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
     font-family: 'PT Sans', sans-serif;
     font-size: 0.9rem;
     color: white;
+}
+
+@keyframes imageAnimation {
+    0%   {background:var(--background_one);}
+    20%   {background:var(--background_one);}
+    25%  {background:var(--background_two);}
+    45%  {background:var(--background_two);}
+    50%  {background:var(--background_three);}
+    70%  {background:var(--background_three);}
+    75%  {background:var(--background_four);}
+    95%  {background:var(--background_four);}
+    100% {background:var(--background_one);}
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -186,12 +202,10 @@ p {
 }
 
 .foot_inner {
-    padding: 2rem 0;
+    padding: 2.1rem 0;
     display: flex;
     justify-content: space-between;
 }
-
-
 
 .social_link {
     color: var(--links);
@@ -229,17 +243,22 @@ p {
 @keyframes back_change {
     0% {
         background-color: var(--background_one);
+
     }
     25% {
-        background-color: var(--background_two);    
+        background-color: var(--background_two);  
+ 
     }
     50% {
         background-color: var(--background_three);
+
     }
     75% {
         background-color: var(--background_four);
+
     }
     100% {
         background-color: var(--background_one);
-        }
+    
+    }
 }
