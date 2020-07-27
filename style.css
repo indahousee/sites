@@ -92,18 +92,27 @@ p {
 }
 
 .palette {
-    position: absolute;
+    position: fixed;
     z-index: -1;
-    top: 0.2rem;
+    top: 10%;
     left: 20%;
-    transform: rotate(10deg);
-    transition: transform 4s linear;
 }
 
 .palette_1 {
     border-radius: 1rem;
     pointer-events: none;
+    width: 100%;
+    height: 100%;
     user-select: none;
+    transform: rotate(10deg);
+    transition: transform 4s linear;
+}
+
+@media only screen and (max-width: 767px) {   
+    .palette_1 {     
+        width: 55%;
+        height: 55%;
+    } 
 }
 
 .nav {
