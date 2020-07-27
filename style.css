@@ -58,7 +58,6 @@ p {
 }
 
 .header {
-    margin-top: 1.5625rem;
     position: relative;
 }
 
@@ -92,17 +91,17 @@ p {
 }
 
 .palette {
-    position: fixed;
+    position: absolute;
     z-index: -1;
     top: 10%;
-    left: 20%;
+    left: 22%;
 }
 
 .palette_1 {
     border-radius: 1rem;
     pointer-events: none;
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
     user-select: none;
     transform: rotate(10deg);
     transition: transform 4s linear;
@@ -237,7 +236,8 @@ p {
 }
 
 .paletterad {
-    align-self: flex-end;
+    height: 250px;
+    width: 250px;
     animation-duration: 120s;
     animation-iteration-count: infinite;
     animation-name: paletterad;
